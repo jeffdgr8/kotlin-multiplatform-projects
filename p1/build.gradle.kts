@@ -26,11 +26,8 @@ kotlin {
     }
 
     sourceSets.commonTest.dependencies {
-        implementation(kotlin("test-annotations-common"))
-        implementation(kotlin("test-common"))
-    }
-
-    sourceSets.getByName("jvmCommonMain").dependencies {
-        implementation(kotlin("test-junit"))
+        implementation(project(":p2"))
+        // adding this fixes the IDE errors
+        //implementation(kotlin("test"))
     }
 }
